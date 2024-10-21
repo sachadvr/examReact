@@ -25,8 +25,8 @@ const Homepage = () => {
                 {products && products.map((product) => (
                     <Link to={`/product/${product.id}`}>
                         <li key={product.id} className="p-2">
-                            <img src={Image} alt="icone" />
-                            <h2 className="text-2xl uppercase font-bold">{product.name}</h2>
+                        <img src={product.image} alt="icone" />
+                        <h2 className="text-2xl uppercase font-bold">{product.name}</h2>
                             <p className="text-gray-400 ellipsis">{product.description}</p>
                             <p className="text-2xl">${product.price}</p>
                             <button className="p-2 bg-black text-white" onClick={(event) => {

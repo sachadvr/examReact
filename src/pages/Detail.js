@@ -3,7 +3,7 @@ import { useAtom } from 'jotai';
 import { useEffect, useState } from 'react';
 import { productsAtom, addToCartAtom } from '../store';
 import Layout from '../components/Layout';
-import image from '../icone.webp'
+import defaultImage from '../icone.webp'; // Image par défaut si aucune n'est trouvée
 
 const ProductDetail = () => {
     const { id } = useParams();
@@ -31,7 +31,11 @@ const ProductDetail = () => {
             <div className="flex gap-5">
                 {/* Image Section */}
                 <div className="w-1/2">
-                    <img src={product.image || image} alt={product.name} className="w-full" />
+                    <img 
+                        src={product.image ? product.image : defaultImage} 
+                        alt={product.name} 
+                        className="w-full" 
+                    />
                 </div>
                 {/* Product Info Section */}
                 <div className="w-1/2">
