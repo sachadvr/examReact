@@ -39,7 +39,7 @@ const ProductDetail = () => {
                 <div className="flex-1 place-items-center flex">
                     <div>
                     <h1 className="text-4xl font-bold mb-4">{product.name}</h1>
-                    <h1 className="text-4xl font-bold mb-4">{product.gender == 'M' ? 'Homme' : 'Femme'}</h1>
+                    <h1 className="text-4xl font-bold mb-4">{product.gender == 'M' ? 'For men' : 'For women'}</h1>
                     <p className="text-lg mb-4">{product.description}</p>
                     <div className="flex items-center mb-6">
                         <p className="text-3xl font-bold mr-4">${product.price}</p>
