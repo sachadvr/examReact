@@ -19,7 +19,6 @@ const Homepage = () => {
 
     return (
         <Layout>
-            <h1>Homepage</h1>
             {loading && <p>Loading...</p>}
             {error && <p>Error: {error.message}</p>}
             <ul className="grid grid-cols-4 gap-3">
@@ -27,10 +26,13 @@ const Homepage = () => {
                     <Link to={`/product/${product.id}`}>
                         <li key={product.id} className="p-2">
                             <img src={Image} alt="icone" />
-                            <h2>{product.name}</h2>
-                            <p>{product.description}</p>
-                            <p>${product.price}</p>
-                            <button onClick={() => addToCart(product)}>Add to Cart</button>
+                            <h2 className="text-2xl uppercase font-bold">{product.name}</h2>
+                            <p className="text-gray-400 ellipsis">{product.description}</p>
+                            <p className="text-2xl">${product.price}</p>
+                            <button className="p-2 bg-black text-white" onClick={(event) => {
+                                event.preventDefault();
+                                addToCart(product)
+                            }}>Add to Cart</button>
                         </li>
                     </Link>
                 ))}

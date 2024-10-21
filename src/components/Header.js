@@ -1,4 +1,9 @@
+import {addToCartAtom, cartAtom, productsAtom} from "../store";
+import {useAtom} from "jotai";
+
 const Header = () => {
+    const [cart, _] = useAtom(cartAtom);
+
     return (
 <header className="bg-gray-800 p-4">
     <nav className="container mx-auto flex justify-between items-center">
