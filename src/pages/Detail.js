@@ -32,7 +32,9 @@ const ProductDetail = () => {
                 <div className="flex-1">
                     <img
                         src={product.image ? product.image : defaultImage}
-                        alt={product.name} className="w-full" />
+                        alt={product.name} className="w-full aspect-square object-contain"
+
+                    />
                 </div>
                 <div className="flex-1 place-items-center flex">
                     <div>

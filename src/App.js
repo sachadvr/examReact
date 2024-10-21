@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from "./components/Layout";
 import Homepage from "./pages/Homepage";
 import ProductDetail from "./pages/Detail";
+import Panier from "./components/Panier";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -15,8 +16,8 @@ const router = createBrowserRouter([
     element: <ProductDetail />
   },
   {
-    path: "/about",
-    element: <>About</>
+    path: "/cart",
+    element: <Panier displayMode="full" />
   },
 ]);
 
