@@ -26,17 +26,7 @@ const Header = () => {
             </nav>
 
             {showCartModal && (
-                <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center">
-                    <div className="bg-white p-4 rounded shadow-lg">
                         <Panier displayMode="popup" />
-                        <button
-                            className="bg-blue-500 text-white px-4 py-2 rounded mt-4"
-                            onClick={() => setShowCartModal(false)}
-                        >
-                            Close
-                        </button>
-                    </div>
-                </div>
             )}
 
             {showPopup && (

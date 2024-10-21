@@ -8,7 +8,8 @@ import {
 } from "../store";
 import { useAtom } from "jotai";
 import { useState } from 'react';
-import {Link, useNavigate} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Layout from "./Layout"; // Assuming you have a Layout component
 
 const Panier = ({ displayMode = "full" }) => {
     const navigate = useNavigate();
@@ -19,7 +20,7 @@ const Panier = ({ displayMode = "full" }) => {
     const [, removeFromCart] = useAtom(removeFromCartAtom);
     const [showCartModal, setShowCartModal] = useAtom(showCartModalAtom);
 
-    return (
+    const cartContent = (
         <>
             {(displayMode === "notification" || showPopup) && (
                 <div className="fixed top-10 right-10 bg-green-500 text-white px-4 py-2 rounded shadow-lg">
@@ -28,7 +29,7 @@ const Panier = ({ displayMode = "full" }) => {
             )}
 
             {(displayMode === "full" || displayMode === "popup") && (
-                <div className={displayMode === "popup" ? "fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center" : ""}>
+                <div className={displayMode === "popup" ? "fixed top-20 right-10 bg-gray-800 bg-opacity-75 flex items-center justify-center" : ""}>
                     <div className="bg-white text-black p-4 rounded shadow-lg">
                         <h2 className="text-2xl mb-4">Your Cart</h2>
                         <ul>
@@ -51,7 +52,7 @@ const Panier = ({ displayMode = "full" }) => {
 
                         {displayMode === "popup" && cart.length !== 0 && (
                             <Link to={'/cart'}>
-                                <button className="bg-blue-500 text-white px-4 py-2 rounded mt-4">
+                                <button className="bg-black text-white px-4 py-2 rounded mt-4">
                                     Go to Cart
                                 </button>
                             </Link>
@@ -59,7 +60,7 @@ const Panier = ({ displayMode = "full" }) => {
 
                         {displayMode === "popup" && (
                             <button
-                                className="bg-blue-500 text-white px-4 py-2 rounded mt-4"
+                                className="ml-4 bg-black hover:bg-red-400 text-white px-4 py-2 rounded mt-4"
                                 onClick={() => setShowCartModal(false)}
                             >
                                 Close
@@ -75,7 +76,7 @@ const Panier = ({ displayMode = "full" }) => {
                                     Continue Shopping
                                 </button>
                                 <button
-                                    className="bg-blue-500 text-white px-4 py-2 rounded mt-4"
+                                    className="ml-2 bg-black text-white px-4 py-2 rounded mt-4"
                                     onClick={() => alert('Checkout not implemented')}
                                 >
                                     Checkout
@@ -86,6 +87,14 @@ const Panier = ({ displayMode = "full" }) => {
                 </div>
             )}
         </>
+    );
+
+    return displayMode === "full" ? (
+        <Layout>
+            {cartContent}
+        </Layout>
+    ) : (
+        cartContent
     );
 };
 
