@@ -22,8 +22,14 @@ export const addToCartAtom = atom(
         } else {
             set(cartAtom, [...cart, { ...product, quantity: 1 }]);
         }
+        set(showAnimationCartState, true);
+
+        setTimeout(() => {
+            set(showAnimationCartState, false);
+        }, 500);
     }
 );
+
 
 export const removeFromCartAtom = atom(
     null,
@@ -32,3 +38,10 @@ export const removeFromCartAtom = atom(
         set(cartAtom, cart.filter((item) => item.id !== productId));
     }
 );
+
+export const cartQuantityAtom = atom((get) => {
+    const cart = get(cartAtom);
+    return cart.reduce((total, item) => total + item.quantity, 0);
+});
+
+export const showAnimationCartState = atom(false);
