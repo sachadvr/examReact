@@ -6,12 +6,12 @@ import { productsAtom } from '../store'; // import productsAtom
 import { useFetch } from "../hooks/useFetch";
 
 const Layout = ({ children }) => {
-    const { data: products, loading, error } = useFetch('/products'); // Fetch products here
-    const [, setProducts] = useAtom(productsAtom); // Store fetched products in productsAtom
+    const { data: products, loading, error } = useFetch('/api/products');
+    const [, setProducts] = useAtom(productsAtom);
 
     useEffect(() => {
         if (products) {
-            setProducts(products); // Store products in atom
+            setProducts(products);
         }
     }, [products, setProducts]);
 
