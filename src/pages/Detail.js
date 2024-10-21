@@ -3,7 +3,7 @@ import { useAtom } from 'jotai';
 import { useEffect, useState } from 'react';
 import { productsAtom, addToCartAtom } from '../store';
 import Layout from '../components/Layout';
-import defaultImage from '../icone.webp'; // Image par défaut si aucune n'est trouvée
+import defaultImage from '../icone.webp';
 
 const ProductDetail = () => {
     const { id } = useParams();

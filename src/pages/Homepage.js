@@ -14,8 +14,8 @@ const Homepage = () => {
     return (
         <Layout>
             <div className="flex justify-between w-full mb-4">
-                <button className="p-2 flex-1 bg-black text-white mr-2" onClick={() => setGenderFilter('M')}>Chaussures pour Hommes</button>
-                <button className="p-2 flex-1 bg-black text-white" onClick={() => setGenderFilter('F')}>Chaussures pour Femmes</button>
+                <button className="p-2 flex-1 bg-black text-white mr-2" onClick={() => setGenderFilter('M')}>Men</button>
+                <button className="p-2 flex-1 bg-black text-white" onClick={() => setGenderFilter('F')}>Women</button>
             </div>
             <ul className="flex flex-col md:grid md:grid-cols-4 gap-3">
                 {filteredProducts && filteredProducts.map((product) => (
@@ -28,7 +28,7 @@ const Homepage = () => {
                             <button className="p-2 bg-black text-white" onClick={(event) => {
                                 event.preventDefault();
                                 addToCart(product);
-                            }}>Add to Cart</button>
+                            }}>Add to cart</button>
                         </li>
                     </Link>
                 ))}

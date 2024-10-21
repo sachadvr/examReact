@@ -7,11 +7,10 @@ import {
     removeFromCartAtom, showCartModalAtom
 } from "../store";
 import { useAtom } from "jotai";
-import { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
-import Layout from "./Layout"; // Assuming you have a Layout component
+import Layout from "./Layout";
 
-const Panier = ({ displayMode = "full" }) => {
+const Cart = ({ displayMode = "full" }) => {
     const navigate = useNavigate();
     const [cart] = useAtom(cartAtom);
     const [showPopup] = useAtom(showAnimationCartState);
@@ -98,4 +97,4 @@ const Panier = ({ displayMode = "full" }) => {
     );
 };
 
-export default Panier;
+export default Cart;

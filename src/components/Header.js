@@ -1,7 +1,7 @@
 import { useAtom } from "jotai";
 import { useState } from 'react';
 import { Link } from "react-router-dom";
-import Panier from "./Panier";
+import Cart from "./Cart";
 import {
     cartQuantityAtom,
     showAnimationCartState, showCartModalAtom,
@@ -20,18 +20,18 @@ const Header = () => {
                 </Link>
                 <ul className="flex space-x-4">
                     <li className="text-white cursor-pointer" onClick={() => setShowCartModal(true)}>
-                        Panier ({cartQuantity})
+                        Cart ({cartQuantity})
                     </li>
                 </ul>
             </nav>
 
             {showCartModal && (
-                        <Panier displayMode="popup" />
+                        <Cart displayMode="popup" />
             )}
 
             {showPopup && (
                 <div className="fixed top-10 right-10 bg-green-500 text-white px-4 py-2 rounded shadow-lg">
-                    <Panier displayMode="notification" />
+                    <Cart displayMode="notification" />
                 </div>
             )}
 
