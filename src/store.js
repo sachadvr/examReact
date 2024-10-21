@@ -47,6 +47,6 @@ export const cartQuantityAtom = atom((get) => {
 export const showAnimationCartState = atom(false);
 
 export const showCartModalAtom = atom(
-    false, // default value for showCartModal (false means closed)
-    (get, set, value) => set(showCartModalAtom, value) // setter for showCartModal
+    false,
+    (get, set, value) => set(showCartModalAtom, value)
 );
