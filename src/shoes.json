@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Air Zoom Pegasus",
+    "price": 120,
+    "color": "White",
+    "description": "The Nike Air Zoom Pegasus delivers reliable performance with a cushioned sole and responsive midfoot. Perfect for runners who seek both speed and comfort during their workouts.",
+    "gender": "F"
+  },
+  {
+    "name": "Revolution 5",
+    "price": 70,
+    "color": "Blue",
+    "description": "With its lightweight knit textile and soft foam cushioning, the Revolution 5 provides all-day comfort and modern style. Ideal for casual runs and everyday wear.",
+    "gender": "M"
+  },
+  {
+    "name": "React Infinity Run",
+    "price": 180,
+    "color": "Red",
+    "description": "Featuring Nike React foam and a breathable upper, the React Infinity Run offers stability and cushioning for longer runs. A perfect blend of support and flexibility.",
+    "gender": "F"
+  },
+  {
+    "name": "Free RN 5.0",
+    "price": 90,
+    "color": "Grey",
+    "description": "The Free RN 5.0 is designed to give you a barefoot running experience. Its flexible sole and snug fit ensure a natural movement with every stride.",
+    "gender": "M"
+  },
+  {
+    "name": "Air Max 270",
+    "price": 150,
+    "color": "Black",
+    "description": "Inspired by Nike’s Air Max heritage, the Air Max 270 combines retro style with modern comfort. Its large air unit provides a plush cushioning effect for all-day wear.",
+    "gender": "F"
+  },
+  {
+    "name": "ZoomX Vaporfly",
+    "price": 250,
+    "color": "Green",
+    "description": "Built for speed, the ZoomX Vaporfly is engineered with Nike’s innovative ZoomX foam for maximum energy return, making it the choice for elite athletes.",
+    "gender": "M"
+  },
+  {
+    "name": "Epic React Flyknit",
+    "price": 160,
+    "color": "Purple",
+    "description": "The Epic React Flyknit provides lightweight and responsive cushioning. Its Flyknit upper adapts to your foot shape for a personalized, snug fit.",
+    "gender": "F"
+  },
+  {
+    "name": "Downshifter 10",
+    "price": 60,
+    "color": "Orange",
+    "description": "With its sleek design and lightweight feel, the Downshifter 10 is perfect for those starting their running journey. Its foam midsole ensures a smooth, cushioned ride.",
+    "gender": "M"
+  },
+  {
+    "name": "Winflo 7",
+    "price": 130,
+    "color": "Pink",
+    "description": "The Winflo 7 offers targeted support with its breathable mesh upper and cushioned sole, designed to keep your feet comfortable during long runs.",
+    "gender": "F"
+  },
+  {
+    "name": "Zoom Structure 23",
+    "price": 200,
+    "color": "Yellow",
+    "description": "A stability-focused running shoe, the Zoom Structure 23 provides a secure fit with additional arch support. Perfect for runners seeking a balanced, cushioned experience.",
+    "gender": "M"
+  }
+]
