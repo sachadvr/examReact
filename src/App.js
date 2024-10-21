@@ -4,14 +4,15 @@ import Header from './components/Header';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from "./components/Layout";
 import Homepage from "./pages/Homepage";
+import ProductDetail from "./pages/Detail";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Homepage />
   },
   {
-    path: "/shop",
-    element: <>Shop</>
+    path: "/product/:id",
+    element: <ProductDetail />
   },
   {
     path: "/about",
